@@ -1,0 +1,47 @@
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "featured"
+      "weekly"
+      "ai"
+      "aside";
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid-flow-col {
+    grid-auto-flow: row;
+  }
+
+  #weekly > div {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  article.grid-flow-col {
+    grid-template-columns: 1fr;
+  }
+
+  #secondary {
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  #weekly figure {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #weekly figure span.content-tag {
+    align-self: flex-start;
+  }
+
+}
